@@ -1,0 +1,104 @@
+/*Changement d'image et de texte par un autre*/
+
+/* définition taille et positionnement du conteneur principal */
+
+article {
+width: 200px;
+height: 200px;
+margin: 0px;
+padding: 0px;
+position: relative;
+font-family: 'Roboto', sans-serif;
+}
+
+/*retrait des marges */
+
+figure{
+margin: 0px;
+padding: 0px;
+}
+
+/* mise en forme de l'image en apparence normale */
+.normal img {
+display: block;
+width: 100%;
+height: 200px;
+opacity: 0.5;
+margin: 0px;
+padding: 0px;
+}
+
+/*mise en forme de l'image en hover*/
+.hover img {
+display: block;
+width: 100%;
+height: 100%;
+opacity: 1;
+margin: 0px;
+padding: 0px;
+}
+
+/* mise en forme du texte en apparence normale */
+
+figcaption {
+
+text-align: center;
+position: absolute;
+top: 20%;
+left: 50%;
+width: 90%;
+font-size: 23px;
+border:solid 2px rgba(255, 255, 255, 0.8) ; 
+border-radius: 10px;
+background: rgba(255, 255, 255, 0.8);
+transform: translate(-50%, -50%);
+
+}
+
+.orange{
+color: orange;
+}
+
+.normal h3{
+color: white;
+position: absolute;
+font-size: 35px;
+margin: 0px;
+width: 100%;
+text-align: center;
+top: 50%
+}
+
+/*mise en forme du texte en hover*/
+
+.hover h3{
+color: white;
+position: absolute;
+font-size: 20px;
+margin: 0px;
+width: 100%;
+text-align: center;
+top: 80%
+}
+
+/*positionnement de la class hover avec une opacity à 0 pour la rendre non visible*/
+
+.hover {
+ position: absolute;
+ top: 0;
+ height: 100%;
+ width: 100%;
+ opacity: 0;
+ transition: .5s ease;
+}
+
+/* definition des opacités de chaque class normal ou hover en fonction du passage de la souris (hover)*/
+/*article de class hover opacity 1 donc visible si passage de souris*/
+article:hover .hover {
+ opacity: 1;
+}
+/*article de class normal opacity 0 donc non visible si passage souri*/
+article:hover .normal {
+ opacity: 0;
+}
+
